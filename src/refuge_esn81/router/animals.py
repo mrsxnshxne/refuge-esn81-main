@@ -8,7 +8,7 @@ from src.refuge_esn81.database.database import get_db
 from src.refuge_esn81.schemas.animalSchema import AnimalCreate, Animal
 from src.refuge_esn81.services.animalService import AnimalService
 
-animalsRouter = APIRouter(prefix="/animals", tags=["animals"])
+animalsRouter = APIRouter(prefix="/api/animals", tags=["animals"])
 
 @animalsRouter.get("/", response_model=list[Animal])
 async def get_animals(db: Session = Depends(get_db)):

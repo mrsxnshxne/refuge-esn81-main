@@ -4,7 +4,7 @@ from src.refuge_esn81.models.animal import Animal
 
 class AnimalService:
     def create_animal(self, db: Session, animal: AnimalCreate):
-        animalToCreate = Animal(
+        animal_to_create = Animal(
         animal.name,
         animal.age,
         animal.description,
@@ -12,10 +12,10 @@ class AnimalService:
         animal.photo_url,
         animal.species_id
         )
-        db.add(animalToCreate)
+        db.add(animal_to_create)
         db.commit()
-        db.refresh(animalToCreate)
-        return animalToCreate
+        db.refresh(animal_to_create)
+        return animal_to_create
 
     def get_animals(self, db: Session, skip: int = 0, limit: int = 100):
         return db.query(Animal).offset(skip).limit(limit).all()
