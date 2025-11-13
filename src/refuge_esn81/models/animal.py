@@ -15,7 +15,7 @@ class Animal(Base):
         name (str): Name of the animal.
         age (int): Age of the animal.
         description (str): Description of the animal.
-        gender (boolean): Gender of the animal (True for male, False for female).
+        gender (str): Gender of the animal (True for male, False for female).
         photo_url (str): URL of the animal's photo.
         species_id (int): Foreign key referencing the species of the animal.
     """
@@ -25,7 +25,7 @@ class Animal(Base):
     name = Column(String(100), index=True)
     age = Column(Integer)
     description = Column(String(500))
-    gender = Column(Boolean)
+    gender = Column(String(100))
     photo_url = Column(String(300))
     species_id = Column(Integer, ForeignKey("species.id"))
 

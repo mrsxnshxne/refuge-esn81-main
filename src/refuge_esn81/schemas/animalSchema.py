@@ -7,10 +7,19 @@ class AnimalBase(BaseModel):
 
        Attributes:
            name (str): The animal's name.
+           species_id (int): The ID of the species.
+           age (int): The animal's age in years.
+           description (str): A short description of the animal.
+           gender (str): The animal's gender (True = male, False = female).
+           photo_url (str): The URL of the animal's photo.
            species_id (int): The ID of the associated species.
        """
     name: str
-    # A compléter
+    species_id: int
+    age: int
+    description: str
+    gender: str
+    photo_url: str
     species_id: int
 
 class AnimalCreate(AnimalBase):
@@ -25,7 +34,7 @@ class AnimalCreate(AnimalBase):
            species_id (int): The ID of the species.
            age (int): The animal's age in years.
            description (str): A short description of the animal.
-           gender (bool): The animal's gender (True = male, False = female).
+           gender (str): The animal's gender (True = male, False = female).
            photo_url (str): The URL of the animal's photo.
 
        Example:
@@ -34,7 +43,7 @@ class AnimalCreate(AnimalBase):
            ...     species_id=1,
            ...     age=3,
            ...     description="Friendly tabby cat",
-           ...     gender=True,
+           ...     gender="Male",
            ...     photo_url="https://example.com/felix.jpg"
            ... )
        """
@@ -42,7 +51,7 @@ class AnimalCreate(AnimalBase):
     species_id: int
     age: int
     description: str
-    gender: bool
+    gender: str
     photo_url: str
 
 class Animal(AnimalBase):
