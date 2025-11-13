@@ -1,0 +1,5 @@
+{
+  "name": "Gestionnaire d'Animaux",
+  "description": "Une application web simple pour gérer des animaux et leurs espèces, en s'interfaçant avec un backend existant.",
+  "requestFramePermissions": []
+}
