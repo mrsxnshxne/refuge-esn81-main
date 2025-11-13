@@ -1,0 +1,10 @@
+[MASTER]
+# Dossiers et fichiers ignorés pendant l'analyse
+ignore=migrations
+ignore-paths=src/projet/migrations
+
+# (Optionnel) Ne pas analyser les fichiers cachés ou compilés
+ignore-patterns=.*\.pyc$
+
+# (Optionnel) Active la recherche récursive
+recursive=y
