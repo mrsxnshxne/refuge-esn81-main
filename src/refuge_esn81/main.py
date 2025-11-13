@@ -2,8 +2,8 @@ from typing import Union
 import uvicorn
 
 from fastapi import FastAPI
-from refuge_esn81.router.animals import animalsRouter
-from refuge_esn81.router.species import speciesRouter
+from src.refuge_esn81.router.animals import animalsRouter
+from src.refuge_esn81.router.species import speciesRouter
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()

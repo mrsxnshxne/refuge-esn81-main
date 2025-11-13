@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from refuge_esn81.schemas.animalSchema import AnimalCreate
-from refuge_esn81.models.animal import Animal
+from src.refuge_esn81.schemas.animalSchema import AnimalCreate
+from src.refuge_esn81.models.animal import Animal
 
 class AnimalService:
     def create_animal(self, db: Session, animal: AnimalCreate):

@@ -4,7 +4,8 @@ class SpeciesBase(BaseModel):
     name: str
 
 class SpeciesCreate(SpeciesBase):
-    pass
+    name: str
+
 
 class Species(SpeciesBase):
     id: int

@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
-from refuge_esn81.database.database import Base
+from src.refuge_esn81.database.database import Base
 from sqlalchemy.orm import relationship
 
 class Animal(Base):

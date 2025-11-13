@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from refuge_esn81.schemas.speciesSchema import Species
+from src.refuge_esn81.schemas.speciesSchema import Species
 
 class AnimalBase(BaseModel):
     name: str
@@ -7,7 +7,12 @@ class AnimalBase(BaseModel):
     species_id: int
 
 class AnimalCreate(AnimalBase):
-    pass
+    name: str
+    species_id: int
+    age: int
+    description: str
+    gender: bool
+    photo_url: str
 
 class Animal(AnimalBase):
     id: int

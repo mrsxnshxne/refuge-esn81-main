@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
-from refuge_esn81.database.database import Base
+from src.refuge_esn81.database.database import Base
 
 class Species(Base):
     __tablename__ = "species"

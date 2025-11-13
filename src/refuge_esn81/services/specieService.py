@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from refuge_esn81.schemas.speciesSchema import SpeciesCreate
-from refuge_esn81.models.species import Species
+from src.refuge_esn81.schemas.speciesSchema import SpeciesCreate
+from src.refuge_esn81.models.species import Species
 
 class SpecieService:
     def create_specie(self, db: Session, specie: SpeciesCreate):
