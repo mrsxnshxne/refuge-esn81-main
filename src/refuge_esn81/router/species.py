@@ -8,8 +8,6 @@ from src.refuge_esn81.services.specieService import SpecieService
 speciesRouter = APIRouter(prefix="/api/species", tags=["species"])
 
 @speciesRouter.get("/", response_model=list[Species])
-
-
 async def get_species(db: Session = Depends(get_db)):
     """
     List all species
