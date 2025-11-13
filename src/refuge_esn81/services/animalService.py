@@ -4,6 +4,8 @@ from src.refuge_esn81.models.animal import Animal
 
 class AnimalService:
     def create_animal(self, db: Session, animal: AnimalCreate):
+        animal = Animal(animal)
+        db_animal = db.add(animal)
         return db_animal
 
     def get_animals(self, db: Session, skip: int = 0, limit: int = 100):
